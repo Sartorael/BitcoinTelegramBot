@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-Subscribers
+      author: Sartorael
+      changes:
+        - createTable:
+            tableName: Subscribers
+            columns:
+              - column:
+                  name: UUID
+                  type: varchar(200)
+                  autoIncrement: false
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: false
+                    nullable: false
+              - column:
+                  name: price
+                  type: bigint
+                  autoIncrement: false
+                  constraints:
+                    primaryKey: false
+                    nullable: true
